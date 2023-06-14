@@ -1,6 +1,6 @@
-import PropTypes from "prop-types";
-import React from "react";
-import { DeleteBtn, List, Item, UserInfo, Avatar } from "./ContactLIst.styled";
+import PropTypes from 'prop-types';
+import React from 'react';
+import { DeleteBtn, List, Item, UserInfo, Avatar } from './ContactLIst.styled';
 
 export default function ContactList({ contacts, deleteContact }) {
   return (
@@ -10,7 +10,7 @@ export default function ContactList({ contacts, deleteContact }) {
           <Item key={id}>
             <Avatar
               src={
-                img || "https://cdn-icons-png.flaticon.com/512/2922/2922506.png"
+                img || 'https://cdn-icons-png.flaticon.com/512/2922/2922506.png'
               }
               alt="avatar"
             />
@@ -33,6 +33,7 @@ ContactList.propTypes = {
       name: PropTypes.string.isRequired,
       phoneNumber: PropTypes.string.isRequired,
       id: PropTypes.string.isRequired,
+      img: PropTypes.string,
     })
   ),
   deleteContact: PropTypes.func.isRequired,
